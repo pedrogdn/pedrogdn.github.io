@@ -1,0 +1,304 @@
+body{
+    margin: 0;
+}
+
+.top{
+    position: relative;
+    text-align: center;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.centered {
+  font-size: 4em;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centered-low {
+  font-weight: 300;
+  font-size: 2em;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.down-arrow {
+  position: absolute;
+  top: calc(100%);
+  left: calc(50%);
+  width: 0;
+  height: 30px;
+  border: 1px solid;
+  border-radius: 2px;
+  animation: jumpInfinite 1.5s infinite;
+}
+
+
+.down-arrow:after {
+  content: " ";
+  position: absolute;
+  top: 12px;
+  left: -9px;
+  width: 16px;
+  height: 16px;
+  border-bottom:2px solid;
+  border-right: 2px solid;
+  border-radius: 2px;
+  transform: rotateZ(45deg);
+}
+
+
+@keyframes jumpInfinite {
+  0% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: 20px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+.title{
+  font-size: 40px;
+}
+
+.mid{
+    position: relative;
+    text-align: center;
+}
+
+
+#photo-of-me{
+  margin-top: 130px;
+}
+
+#me{
+  border-radius: 50%;
+}
+
+.text{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 1,600;
+
+}
+
+.subtext{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 1200;
+}
+
+.skills{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.skill-items{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.item{
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 30% 70%;
+
+}
+
+.item-img{
+  height: 100px;
+  justify-self: center;
+  align-self: center;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: 4;
+
+}
+
+.item-name{
+  font-size: 25px;
+  grid-column-start: 2;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 1200;
+}
+
+.item-desc{
+  text-align: justify;
+  text-justify: inter-word;
+  grid-row-start: 2;
+  grid-column-start: 2;
+}
+
+p{
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: .2rem;
+
+}
+
+hr.solid {
+  margin-top: 90px;
+  margin-bottom: 90px;
+  border-top: 3px solid #bbb;
+  width: 30%;
+}
+
+.button {
+  margin-top: 30px;
+  background-color: #0478aa; /* Blue */
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: rgb(117, 186, 255); /* Green */
+  color: white;
+}
+
+a{
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: .2rem;
+}
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+footer{
+  background-color: #0478aa;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.links{
+  padding-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 50px;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 768px) {
+
+  .mid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #mid-items{
+    width: 80%;
+  }
+  
+  .skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+  }
+
+  .skill-items{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .item-img {
+    /* Adjustments to image sizing and positioning if necessary */
+    width: auto;
+  }
+
+  .item-desc {
+    /* Optional: Adjust font size for readability */
+    font-size: smaller;
+    grid-row-start: 3;
+  }
+
+  .down-arrow {
+    height: 15px;
+  }
+
+  .down-arrow:after {
+    top: 6px;
+    left: -6px;
+    width: 10px;
+    height: 10px;
+  }
+
+  .centered {
+      font-size: 9vw;
+      top: 30%; /* Adjust position for better visibility */
+  }
+
+  .centered-low {
+      font-size: 4vw;
+      top: 50%; /* Adjust position for better visibility */
+  }
+
+  .item-name{
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 1200;
+  }
+
+  .title{
+    font-size: 35px;
+  }
+
+  #photo-of-me img {
+      width: 50%; /* Larger image */
+  }
+
+  .item-desc, p {
+      font-size: 0.8em; /* Smaller paragraph font size */
+  }
+}
